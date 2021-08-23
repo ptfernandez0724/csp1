@@ -518,6 +518,7 @@ div.button-social a:hover {
     font-size: 35px;
     font-weight: 700;
     text-transform: lowercase;
+    margin: 20px;
 }
 
 .stats .fas {
@@ -941,10 +942,9 @@ footer p {
 
 /* Set the size of the div element that contains the map */
 #map {
-    position: relative;
-    padding-bottom: 25%; // This is the aspect ratio
-    height: 50%;
-    overflow: hidden;
+
+    padding-bottom: 25%; 
+    
 }
 
 #map script {
