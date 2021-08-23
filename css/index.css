@@ -941,10 +941,18 @@ footer p {
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 300px;
-  /* The height is 400 pixels */
-  width: 50%;
-  /* The width is the width of the web page */
+    position: relative;
+    padding-bottom: 25%; // This is the aspect ratio
+    height: 50%;
+    overflow: hidden;
+}
+
+#map script {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .navbar-toggle .icon-bar {
@@ -977,11 +985,8 @@ footer p {
     border-color: #fcee0a;
 }
 
-@media only screen and (max-width: 576px) {
-    #map {
-        align-items: center;
-        align-content: center;
-    }
-}
+
+
+
 
 
