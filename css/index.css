@@ -57,7 +57,7 @@ h5 {
 
 
 
-}
+
 
 
 [data-tooltip]:hover:before,
@@ -213,7 +213,7 @@ h5 {
 }
 
 button.navbar-toggle.collapsed {
-    background-color: ##ff003c;
+    background-color: #ff003c;
     border: none;
 }
 
@@ -522,7 +522,7 @@ div.button-social a:hover {
 }
 
 .stats .fas {
-    color: ##fcee0a;
+    color: #fcee0a;
     font-size: 60px;
 }
 
@@ -630,7 +630,7 @@ div.button-social a:hover {
     margin-top: 0;
     margin-bottom: 0.333em;
     font-size: 18px;
-    color: ; #f8ef00
+    color:  #f8ef00;
     font-weight: 700;
 }
 
