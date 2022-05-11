@@ -901,7 +901,7 @@ footer p {
 }
 
 
-.arr {
+.footer {
     background: #ff003c;
     color: #fff;
     text-align: center;
@@ -909,7 +909,7 @@ footer p {
     margin-top: 20px;
 }
 
-.arr p {
+.footer p {
     padding-top: 10px;
     font-size: 11px;
 }
