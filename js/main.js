@@ -144,7 +144,7 @@ emailElm.addEventListener('click', function() {
 // Map
 function initMap() {
   
-  var location = {lat: 14.485706, lng: 121.000476};
+  var location = {lat: 43.490850, lng: -80.518380};
   
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
