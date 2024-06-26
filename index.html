@@ -23,6 +23,29 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+				// https://dashboard.emailjs.com/admin/account
+				emailjs.init({
+				publicKey: "4PsHqyRHBokkq_KY0",
+				});
+			})();
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+				document.getElementById('contact-form').addEventListener('Submit', function(event) {
+					event.preventDefault();
+					// these IDs from the previous steps
+					emailjs.sendForm('contact_service', 'contact_form', this)
+						.then(() => {
+							console.log('SUCCESS!');
+						}, (error) => {
+							console.log('FAILED...', error);
+						});
+				});
+			}
+		</script>
 	</head>
 
 	<body>
@@ -72,11 +95,11 @@
 						<div class="col-md-8 col-md-offset-2">
 							<!-- start typer hello  -->
 							<div class="brand-heading">
-								<span class="txt-rotate" data-period="100" data-rotate='[ "Hello!"]'></span>
+								<span class="txt-rotate" data-period="100" data-rotate='[ "Hello!", "Bonjour!", "こんにちは!", "안녕하세요!", "Hallo!", "مرحبًا!", "Hola!", "你好!", "Kamusta!"]'></span>
 							</div>
 							<!-- end typer hello -->
 							<p class="intro-text">My name is <span class="city">Paulo Fernandez</span>!
-								I'm a <strong>developer/analyst</strong> based in Ontario, Canada.</p>
+								I'm an <strong>Analyst/Full Stack Developer</strong> based in Ontario, Canada.</p>
 								<!-- start mouse wrap -->
 								<div class="mouse-warp">
 									<a href="#mouse-here" class="page-scroll">
@@ -118,12 +141,12 @@
 							</div>
 						</div>
 						<div class="col-lg-6 about-intro-text">
-							<p>I'm a <span>developer/analyst</span> living in Waterloo City, Ontario, Canada. I have finished a graduate certificate in Information Technology Business Analysis at Conestoga College - Kitchener Downtown Campus with distinction. <span class="fas fa-gamepad" aria-hidden="true"></span></p>
+							<p>I'm an <span>Analyst/Full Stack Developer</span> living in Waterloo City, Ontario, Canada. I have finished a graduate certificate in Information Technology Business Analysis at Conestoga College - Kitchener Downtown Campus with distinction. <span class="fas fa-gamepad" aria-hidden="true"></span></p>
 
 								<div class="button-group">
 									<div class="text">Download my CV</div>
 									<!-- put cv here -->
-									<div class="icon-cv"><a href="assets/PTF_Resume_05092024.pdf" alt="PTF CV" target="_blank"><span class="fas fa-arrow-circle-down" aria-hidden="true"></span></a></div>
+									<div class="icon-cv"><a href="assets/Paulo Fernandez_Resume.pdf" alt="PTF CV" target="_blank"><span class="fas fa-arrow-circle-down" aria-hidden="true"></span></a></div>
 								</div>
 							</div>
 						</div>
@@ -323,7 +346,7 @@
 				</section>
 				<!-- end skills -->          
 				
-				<!-- start count stats -->
+				<!-- start count stats
 				<section id="counter-stats">
 					<div class="container">
 						<div class="row">
@@ -349,9 +372,9 @@
 							</div>
 						</div>
 						<!-- end row counter stats -->
-					</div>
+					<!-- </div> -->
 					<!-- end container counter stats -->
-				</section>
+				<!-- </section> --> -->
 				
 					<!-- end cont stats -->
 
@@ -361,20 +384,20 @@
 
 							<h2>CONTACT</h2>
 							<div class="row">
-								<form class="col-md-6 text-left">
+								<form class="col-md-6 text-left" id="contact-form">
 									<div class="form-group">
 										<label for="fullname">Full Name:</label>
-										<input type="text" class="form-control" id="fullname" placeholder="your full name">
+										<input type="text" name="from_name" class="form-control" placeholder="your full name">
 
 										
 										<label for="email">E-mail Address:</label>
-										<input type="email" class="form-control" id="email" placeholder="input your e-mail address">
+										<input type="email" name="reply_to" class="form-control" placeholder="your e-mail address">
 
 
 										<label for="message">Message:</label>
-										<textarea class="form-control" rows="4" placeholder="type your message here"></textarea> 
+										<textarea class="form-control" name="message" rows="4" placeholder="type your message here"></textarea> 
 
-										<div class="button-group">
+										<div class="button-group" type="Submit" value="Send">
 											<div class="text">Submit</div>
 										</div>
 									</div>
